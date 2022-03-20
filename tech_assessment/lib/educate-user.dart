@@ -14,10 +14,7 @@ class _educateUserState extends State<educateUser> {
 
   GlobalKey<PageContainerState> key = GlobalKey();
   int counter = 0;
-
-
-   PageController controller;
-
+  PageController controller;
 
 
   @override
@@ -63,13 +60,7 @@ class _educateUserState extends State<educateUser> {
                         onTap: (){
                           Navigator.push(
                             context,
-
-                            MaterialPageRoute(builder: (context) =>
-
-                                listContact(
-
-
-                                )
+                            MaterialPageRoute(builder: (context) => listContact()
                             ),
                           );
                         },
@@ -78,8 +69,6 @@ class _educateUserState extends State<educateUser> {
                           width: 30,
                           child:     Text ("skip",style: TextStyle(color: Colors.black45, fontWeight: FontWeight.w700, fontSize: 12),),
                         )
-
-
                       ),
                     ),
                     SizedBox(height: 25),
@@ -89,17 +78,9 @@ class _educateUserState extends State<educateUser> {
                         key: key,
                         child: PageView(
                             children: <Widget> [
-
-
                               Container(
-
                                 child:Column(
-
-
-
                                   children: [
-
-
                                     Container(
 
                                       child:     FloatingActionButton(
@@ -112,8 +93,6 @@ class _educateUserState extends State<educateUser> {
                                       height: 75,
                                       width: 75,
                                     ),
-
-
                                     SizedBox(height: 75),
                                     Text(
                                       "Insert Contact Information",
@@ -126,18 +105,14 @@ class _educateUserState extends State<educateUser> {
                                       style: TextStyle(color: const Color(0xFFF2F2F2), fontWeight: FontWeight.w400, fontSize: 10),
                                       textAlign: TextAlign.center,
                                     ),
-
                                   ],
                                   mainAxisAlignment: MainAxisAlignment.end,
                                 ),
                                 padding: EdgeInsets.fromLTRB(10, 0, 10, 60),
                               ),
                               Container(
-
                                 child:Column(
-
                                   children: [
-
                                     Container(
                                         width: double.infinity,
                                         padding: EdgeInsets.all(12),
@@ -154,7 +129,6 @@ class _educateUserState extends State<educateUser> {
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
-
                                           Text("Arifah", style: TextStyle(
                                             color: Color.fromRGBO(79,79,79,1),
                                             fontSize: 16,
@@ -162,15 +136,6 @@ class _educateUserState extends State<educateUser> {
                                             //decoration: TextDecoration.underline,
                                           ), ),
                                           SizedBox( height: 5,),
-                                          /*
-                                  Text(dataList[i].phone, style: TextStyle(
-                                    color: Color.fromRGBO(79,79,79,1),
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w700,
-                                    //decoration: TextDecoration.underline,
-                                  ), ),
-
-                                   */
                                           Align(
                                             alignment: Alignment.bottomRight,
                                             child:  Container(
@@ -188,9 +153,6 @@ class _educateUserState extends State<educateUser> {
                                                 )
                                             ),
                                           )
-
-
-
                                         ],
                                       ),
                                     ),
@@ -207,19 +169,14 @@ class _educateUserState extends State<educateUser> {
                                       style: TextStyle(color: const Color(0xFFF2F2F2), fontWeight: FontWeight.w400, fontSize: 10),
                                       textAlign: TextAlign.center,
                                     ),
-
                                   ],
                                   mainAxisAlignment: MainAxisAlignment.end,
                                 ),
                                 padding: EdgeInsets.fromLTRB(10, 10, 10, 60),
                               ),
                               Container(
-
                                 child:Column(
-
                                   children: [
-
-
                                     Container(
                                       height: 40,
                                       padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
@@ -255,7 +212,6 @@ class _educateUserState extends State<educateUser> {
                                       ),
                                     ),
                                     SizedBox(height: 85),
-
                                     Text(
                                       "Searching",
                                       style: TextStyle(color: const Color(0xFFF2F2F2), fontWeight: FontWeight.w700, fontSize: 20),
@@ -267,15 +223,11 @@ class _educateUserState extends State<educateUser> {
                                       style: TextStyle(color: const Color(0xFFF2F2F2), fontWeight: FontWeight.w400, fontSize: 10),
                                       textAlign: TextAlign.center,
                                     ),
-
                                   ],
                                   mainAxisAlignment: MainAxisAlignment.end,
                                 ),
                                 padding: EdgeInsets.fromLTRB(10, 10, 10, 60),
                               ),
-
-
-
                             ],
                             controller: controller,
                             reverse: false,
@@ -338,57 +290,7 @@ class _educateUserState extends State<educateUser> {
                 ),
               ),
             ),
-
-
-            /*
-
-            Container(
-              height: 50,
-              child:  Align(
-                alignment: Alignment.bottomRight,
-                child: Padding(
-                    padding: EdgeInsets.fromLTRB(100, 0, 0, 0),
-                    child:  AnimatedSplashScreen(
-                      splash:  Image.asset("public/images/animation.png"),
-                      nextScreen: educateUser(),
-                      splashTransition: SplashTransition.rotationTransition,
-                      duration: 3000,
-                      backgroundColor: Color(0xFFF2F2F2),
-                      //nextScreen: educateUser(),
-                    )
-
-                  /*
-                  AnimatedSplashScreen(
-                    splash:  Image.asset("public/images/motlog-logo.png"),
-                    nextScreen: educateUser(),
-                    S
-                    //nextScreen: educateUser(),
-                  )
-
-                       */
-                  /*
-                  Image(
-                    image: AssetImage("public/images/motlog-logo.png"),
-                  ),
-
-                   */
-                ),
-              ),
-            )
-
-             */
-
-
-
-
-
-
-
-
-
-
           ],
-
         ),
       ),
       // This trailing comm

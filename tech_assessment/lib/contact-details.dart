@@ -1,13 +1,10 @@
-import 'dart:convert';
 import 'package:intl/intl.dart';
-
 import 'package:flutter/material.dart';
 
 class contactDetails extends StatefulWidget {
   final user;
   final phone;
   final checkIn;
-
 
   contactDetails({Key key,
     this.user,
@@ -23,12 +20,10 @@ class contactDetails extends StatefulWidget {
 class _contactDetailsState extends State<contactDetails> {
 
   void initState() {
-
     setFormat(widget.checkIn);
-
-
     super.initState();
   }
+
 
   void setFormat(check_in) {
   var temp = DateTime.parse(check_in);
@@ -42,11 +37,7 @@ class _contactDetailsState extends State<contactDetails> {
   @override
   Widget build(BuildContext context) {
 
-
-
-
     return Scaffold(
-
 
       appBar:  AppBar(
         leading: BackButton(
@@ -137,13 +128,9 @@ class _contactDetailsState extends State<contactDetails> {
                   ],
                 )
             )
-
-
           ],
-
         ),
       ),
-   // This trailing comm
     );
   }
 }

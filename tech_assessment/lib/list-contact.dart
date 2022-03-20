@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'contact-details.dart';
 
 class listContact extends StatefulWidget {
- // const listContact({Key? key}) : super(key: key);
 
   @override
   _listContactState createState() => _listContactState();
@@ -37,23 +36,17 @@ class _listContactState extends State<listContact> {
   ];
 
   var search = TextEditingController();
-
   var name = TextEditingController();
   var phone = TextEditingController();
 
   @override
   void initState() {
-    // TODO: implement initState
-
     foundContact = dataList;
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-
-
-
 
     String dateCheckIn;
     String timeCheckIn;
@@ -170,15 +163,6 @@ class _listContactState extends State<listContact> {
                                     //decoration: TextDecoration.underline,
                                   ), ),
                                   SizedBox( height: 5,),
-                                  /*
-                                  Text(dataList[i].phone, style: TextStyle(
-                                    color: Color.fromRGBO(79,79,79,1),
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w700,
-                                    //decoration: TextDecoration.underline,
-                                  ), ),
-
-                                   */
                                   Align(
                                     alignment: Alignment.bottomRight,
                                     child:  Container(
@@ -196,14 +180,10 @@ class _listContactState extends State<listContact> {
                                         )
                                     ),
                                   )
-
-
-
                                 ],
                               ),
                             )
                         );
-
                       }
                   ),
                 )
@@ -346,18 +326,6 @@ class _listContactState extends State<listContact> {
             ),
           ),
         ),
-
-        /*
-        onPressed: (){
-          setState(() {
-
-            dataList.add(DataContact(user: "Arifah", phone: "01114375911", checkIn: DateTime.now().toString()));
-            print(dataList);
-          });
-
-        },
-
-         */
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
@@ -366,8 +334,6 @@ class _listContactState extends State<listContact> {
     );
 
   }
-
-
   void searchContact(String query){
 
       final suggestion = dataList.where ((DataContact){
@@ -387,59 +353,7 @@ class _listContactState extends State<listContact> {
 
 
   }
-
-  /*
-  void searchContact(String query){
-
-
-
-    final suggestion = dataList.where ((DataContact){
-      final userContact = DataContact.user.toLowerCase();
-      final input = query.toLowerCase();
-      return userContact.contains(input);
-    }).toList();
-
-    final sugestion = dataList.reversed .toList();
-
-
-    if(search.text.isEmpty){
-
-      print(dataList);
-      setState(() => dataList = sugestion);
-    }
-    else{
-      print(dataList);
-      setState(() => dataList = suggestion);
-
-    }
-
-
-
-
-  }// This trailing comm
-
-   */
-
-
 }
-
-/*
-class DataContact {
-  String user;
-  String phone;
-  String checkIn;
-
-  DataContact(this.user, this.phone, this.checkIn);
-  factory DataContact.fromJson(dynamic json) {
-    return DataContact(json['user'] as String, json['phone'] as String, json['check-in'] as String);
-  }
-  @override
-  String toString() {
-    return '{ ${this.user}, ${this.phone}, ${this.checkIn} }';
-  }
-}
-
- */
 
 class DataContact {
   String user;
